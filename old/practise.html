@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.card-body p {
+  color: #555;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Slideshow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="buttons">
+      <button id="imageBtn">Image Timeline</button>
+      <button id="textBtn">Text Timeline</button>
+    </div>
+
+    <div id="imageTimeline" class="timeline">
+      <div class="card">
+        <img src="image1.jpg" alt="Image 1">
+        <div class="card-body">
+          <h3>Image 1</h3>
+          <p>The beginning of the project.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image2.jpg" alt="Image 2">
+        <div class="card-body">
+          <h3>Image 2</h3>
+          <p>Progress of the project.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image3.jpg" alt="Image 3">
+        <div class="card-body">
+          <h3>Image 3</h3>
+          <p>Completion of the project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="textTimeline" class="timeline hidden">
+      <div class="card">
+        <div class="card-body">
+          <h3>2024</h3>
+          <p>Started the project with initial planning and research.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>2025</h3>
+          <p>Progressing well, some challenges were overcome.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>2026</h3>
+          <p>Successfully completed the project and launched it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ika
+
+  <script src="script.js"></script>
+</body>
+
+<script>
+  // Get the buttons and timeline containers
+const imageBtn = document.getElementById('imageBtn');
+const textBtn = document.getElementById('textBtn');
+const imageTimeline = document.getElementById('imageTimeline');
+const textTimeline = document.getElementById('textTimeline');
+
+// Function to show image timeline and hide text timeline
+imageBtn.addEventListener('click', () => {
+  imageTimeline.classList.remove('hidden');
+  textTimeline.classList.add('hidden');
+});
+
+// Function to show text timeline and hide image timeline
+textBtn.addEventListener('click', () => {
+  imageTimeline.classList.add('hidden');
+  textTimeline.classList.remove('hidden');
+});
+
+</script>
+</html>

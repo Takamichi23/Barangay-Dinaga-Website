@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Details -->
+    <title>Homepage</title>
+    <link rel="shortcut icon" href="img/logo.png" />
+
+    <!-- Stylesheet -->
+    <link href="light.css" rel="stylesheet" id="theme-link">
+
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DotGothic16&display=swap');
+        </style>
+
+    <!-- UIcons from Flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+
+    <!-- Script -->
+     <script src="Home.js" defer></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img class="logo" src="imgs/logo.png" alt="">
+        <div class="navbutton-set">
+            <a href="Home.html" target="_self" class="navbutton nav-active">
+                <i class="fi fi-rr-home"></i>
+            </a>
+            <a class="navbutton nav-static" href="CitizenGuide.html">
+                <i class="fi fi-rr-comment-user"></i>
+            </a>
+            <a class="navbutton nav-static" href="News.html">
+                <i class="fi fi-rr-megaphone-sound-waves"></i>
+            </a>
+            <a class="navbutton nav-static" href="About.html">
+                <i class="fi fi-rr-bank"></i>
+            </a>
+            <a class="navbutton nav-static" href="contact.html">
+                <i class="fi fi-rr-phone-call"></i>
+            </a>
+        </div>
+
+        <button class="darkbutton nav-static">
+            <i class="fi fi-rr-dark-mode-alt"></i>
+        </button>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="page">
+        <div class="quick-panel-draft">
+            <header class="header"    style="margin-top: -15px;">
+                <div class="left">
+                    <!-- <div class="title-text"><span class="body-text">Municipality of Canaman</span><br>Barangay Dinaga</div> -->
+                    <span class="munici body-text">Municipality of Canaman</span>
+                    <span class="barangay title-text">Barangay Dinaga</span>
+                </div>
+                <div class="right">
+                    <div class="body-text" id="current-time">12:00:00</div>
+                    <div class="body-text" id="current-date" style="text-align: right;">Friday, September 27, 2024</div>
+                </div>
+            </header>
+
+            <div class="slideshow">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <img class="imgmain" src="imgs/slide1.png" alt="Slide 1" />
+                    <img class="slideblob" src="imgs/mainblob1.png">
+                    <div class="caption">
+                        <p class="slide-text">Barangay Dinaga<br>Celebrates Foundation Anniversary<br>with Annual Civic Parade</p>
+                        <div class="date-text">Barangay Dinaga Foundation Anniversary<br>August 3, 2024</div>
+                    </div>
+                </div>
+            
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img class="imgmain" src="imgs/slide2.png" alt="Slide 2" />
+                    <img src="imgs/mainblob2.png" alt="" class="slideblob">
+                    <div class="caption">
+                        <p class="slide-text">Introducing the Sangguniang<br>Kabataan Council<br>of Barangay Dinaga</p>
+                        <div class="date-text">Barangay Dinaga Foundation Anniversary<br>August 3, 2024</div>
+                    </div>
+                </div>
+            
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img class="imgmain" src="imgs/slide3.png" alt="Slide 3" />
+                    <img src="imgs/mainblob3.png" alt="" class="slideblob">
+                    <div class="caption">
+                        <p class="slide-text">Youth Night &<br>Awarding Ceremony<br>at Mayor’s Cup</p>
+                        <div class="date-text">Barangay Dinaga Foundation Anniversary<br>August 3, 2024</div>
+                    </div>
+                </div>
+            
+                <!-- Navigation Buttons -->
+                <button class="prev" onclick="changeSlide(-1)">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </button>
+                <button class="next" onclick="changeSlide(1)">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </button>
+            
+                <!-- Slide Indicators -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+            
+
+            <div class="sub">
+                <div class="quick-link">
+                    <img src="imgs/quicklink1.png" class="ql-main" alt="">
+                    <img src="imgs/ql1blob.png" style="height: 10vh;" class="ql-overlay" alt="">
+                    <a class="view" href="CitizenGuide.html">
+                        <i class="fi fi-rr-arrow-small-right"></i>
+                        <p class="detail-text">View</p>
+                    </a>
+                    <p class="header-text">View Citizen Guides</p>
+                </div>
+                <div class="quick-link">
+                    <img src="imgs/quicklink2.png" class="ql-main" alt="">
+                    <img src="imgs/ql2blob.png" style="width: 100%; bottom: -30px;" class="ql-overlay" alt="">
+                    <a class="view" href="News.html">
+                        <i class="fi fi-rr-arrow-small-right"></i>
+                        <p class="detail-text">View</p>
+                    </a>
+                    <p class="header-text">Take a look on Latest<br>News and Events</p>
+                </div>
+                <div class="quick-link">
+                    <img src="imgs/quicklink3.png" class="ql-main" alt="">
+                    <img src="imgs/ql3blob.png" style="height: 13vh;" class="ql-overlay" alt="">
+                    <a class="view" href="contact.html">
+                        <i class="fi fi-rr-arrow-small-right"></i>
+                        <p class="detail-text">View</p>
+                    </a>
+                    <p class="header-text">View Emergency<br>Contact Information</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Articles -->
+        <div class="section-parent">
+            <div class="featured-articles">
+                <p class="title-text">Featured Articles</p>
+                <div class="buttontag-set">
+                    <button class="button-tag active" onclick="showArticles('news')">
+                        <i class="fi fi-rr-megaphone-sound-waves"></i>
+                        <p class="detail-text">News</p>
+                    </button>
+                    <button class="button-tag" onclick="showArticles('guides')">
+                        <i class="fi fi-rr-comment-user"></i>
+                        <p class="detail-text">Citizen's Guides</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="fa-article-set" id="articles">
+                <!-- Default content: News -->
+                <div class="fa-article">
+                    <img src="imgs/trickortits.png" alt="">
+                    <div class="fa-text-wrap">
+                        <p class="header-text">Alimbayod Moms Celebrate Successful 2nd Halloween Trick-or-Treat!</p>
+                        <p class="detail-text yay">November 17, 2024</p>
+                    </div>
+                </div>
+                <div class="fa-article">
+                    <img src="imgs/political_dynasty_moment.png" alt="">
+                    <div class="fa-text-wrap">
+                        <p class="header-text">KaFuerte Medical Mission Brings Health Services to Barangay Dinaga</p>
+                        <p class="detail-text yay">June 17, 2024</p>
+                    </div>
+                </div>
+                <div class="fa-article">
+                    <img src="imgs/restorepower.png" alt="">
+                    <div class="fa-text-wrap">
+                        <p class="header-text">5 of 24 Barangays in Canaman Restore Power Supply After Typhoon</p>
+                        <p class="detail-text yay">March 9, 2024</p>
+                    </div>
+                </div>
+                <div class="fa-article">
+                    <img src="imgs/bball.png" alt="">
+                    <div class="fa-text-wrap">
+                        <p class="header-text">Basketball Inter-Color Tournament Kicks Off in Barangay Dinaga</p>
+                        <p class="detail-text yay">May 5, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Services of the Barangay -->
+        <div class="section-parent">
+            <div>
+                <p class="title-text" style="text-align: center;">Services of the Barangay</p>
+                <div class="services-container">
+                    <div class="services" style="background-color: #7371B7;">
+                        <i class="fi fi-rr-stethoscope" style="opacity: 40%;"></i>
+                        <p class="card-text">Free<br>Check-Up*</p>
+                    </div>
+                    <div class="services" style="background-color: #F6B499;">
+                        <i class="fi fi-rr-school-bus"></i>
+                        <p class="card-text">Free<br>Rides*</p>
+                    </div>
+                    <div class="services" style="background-color: #E76766;">
+                        <i class="fi fi-rr-syringe" style="opacity: 70%;"></i>
+                        <p class="card-text">Free<br>Vaccines*</p>
+                    </div>
+                    <div class="services" style="background-color: #92BCD7;">
+                        <i class="fi fi-rr-signal-alt-1" style="opacity: 70%;"></i>
+                        <p class="card-text">Free<br>Hall Wi-fi</p>
+                    </div>
+                </div>
+                <p class="body-text annual-text" style="display: flex; gap: 0px;">* Terms and Conditions Apply</p>
+            </div>
+        </div>
+
+        <!-- About Dinaga -->
+        <div class="section-parent">
+            <div class="about">
+                <p class="title-text" style="display: flex; justify-content: center;">About Dinaga</p>
+                <div class="buttontag-set">
+                    <a class="button-tag" href="About.html">
+                        <i class="fi fi-rr-bank"></i>
+                        <p class="detail-text">View About</p>
+                    </a>
+                    <a class="button-tag" target="_blank" href="https://www.google.com/maps?ll=13.64875,123.17492&z=16&t=m&hl=en&gl=PH&mapclient=embed&q=Dinaga+(Pob.)+Canaman+Camarines+Sur">
+                        <i class="fi fi-rr-map-marker"></i>
+                        <p class="detail-text">View Map</p>
+                    </a>
+                    <a class="button-tag" href="About.html#officials">
+                        <i class="fi fi-rr-users-alt"></i>
+                        <p class="detail-text">Barangay Officials</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="about-container">
+                <div class="photos-container">
+                    <div class="photo-main">
+                        <img src="imgs/ad-main.png" alt="">
+                    </div>
+                    <div class="photo-sub-container">
+                        <div class="photo-sub">
+                            <img src="imgs/ad-sub1.png" alt="">
+                        </div>
+                        <div class="photo-sub">
+                            <img src="imgs/ad-sub2.png" alt="">
+                        </div>
+                        <div class="photo-sub">
+                            <img src="imgs/ad-sub3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div> 
+                    <iframe class="gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.148082188691!2d123.17234507590135!3d13.648754699669261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a1f35c2edb1681%3A0xc9966568090f940f!2sDinaga%20(Pob.)%2C%20Canaman%2C%20Camarines%20Sur!5e0!3m2!1sen!2sph!4v1734674264109!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
+            </div>
+        </div>
+
+        <!-- Annual Census -->
+         <div class="section-parent">
+            <div class="about">
+                <p class="title-text" style="display: flex; justify-content: center;">Annual Census</p>
+                <p class="body-text annual-text" style="text-align: center;">Dinaga, formerly Poblacion, is a barangay in the municipality of Canaman, in the province of Camarines Sur. Its population as determined by the 2020 Census was 1,768. This represented 4.88% of the total population of Canaman.</p>
+            </div>
+            
+            <div class="census-container">
+                <div class="census" style="background-color: #92BCD7;">
+                    <i class="fi fi-rr-man-head" style="opacity: 70%;"></i>
+                    <p class="card-text">Male Popul:<br><span class="typewriter-number" data-target="986">0</span></p>
+                </div>
+                <div class="census" style="background-color: #E76766;">
+                    <i class="fi fi-rr-woman-head" style="opacity: 70%;"></i>
+                    <p class="card-text">Female Pop:<br><span class="typewriter-number" data-target="975">0</span></p>
+                </div>
+                <div class="census" style="background-color: #F6B499;">
+                    <i class="fi fi-rr-child-head"></i>
+                    <p class="card-text">Child Popul:<br><span class="typewriter-number" data-target="528">0</span></p>
+                </div>                
+                <div class="census" style="background-color: #7371B7;">
+                    <i class="fi fi-rr-family" style="opacity: 40%;"></i>
+                    <p class="card-text">Number of<br>Families:<br><span class="typewriter-number" data-target="421">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer">
+                <div class="logo-desc">
+                    <div class="community-logo">
+                        <img src="imgs/logo.png" alt="logo" style="width: 70px; aspect-ratio: 1;">
+                        <div>
+                            <h4>Official Website of Barangay Dinaga</h4>
+                        </div>
+                    </div>
+                    <p class="text-content">Property of Barangay Dinaga, Canaman, Camarines Sur, 4400. Developed by QuadraNova. Hosted by QuadraNova.</p>
+                </div>
+            
+                <div class="right-link-container">
+                    <div class="right-link">
+                        <h4>Home</h4>
+                        <ul>
+                            <li><a href="">Back to top</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="right-link">
+                        <h4>News</h4>
+                        <ul>
+                            <li><a href="News.html">News Collection</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="right-link">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="About.html">About Barangay</a></li>
+                            <li><a href="About.html">History</a></li>
+                            <li><a href="About.html">Barangay Official</a></li>
+                            <li><a href="About.html">Sangguniang Kabataan</a></li>
+                            <li><a href="About.html">Barangay Watchman</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="right-link">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="contact.html">Emergency Hotlines</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+        
+                <div class="copyright" style="bottom: 20px; left: 20px;">
+                    <p> &copy; QuadraNova 2024. All Rights Reserved.</p>
+                </div>
+        
+                <div class="icons">
+                    <a href="https://www.facebook.com/BrgyDinaga" target="_blank" class="footbutton">
+                        <i class="fi fi-brands-facebook"></i>
+                    </a>
+                    <a href="https://www.messenger.com" target="_blank" class="footbutton">
+                        <i class="fi fi-brands-facebook-messenger"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quad.ranova/" target="_blank" class="footbutton">
+                        <i class="fi fi-brands-instagram"></i>
+                    </a>
+                </div>
+            </div> 
+        </footer>
+    </div>
+</body>
+</html>

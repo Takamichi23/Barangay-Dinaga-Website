@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Details --> 
+    <title>CitizenGuide</title>
+    <link rel="shortcut icon" href="imgs/logo.png" />
+
+    <!-- Stylesheet -->
+    <link href="CitizenGuide.css" rel="stylesheet" id="theme-link">
+
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DotGothic16&display=swap');
+        </style>
+
+    <!-- UIcons from Flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+    
+    <!-- Script --> 
+    <script src="CitizenGuide.js" defer></script>
+
+    <!-- Script --> 
+    <script src="Home.js" defer></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img class="logo" src="imgs/logo.png" alt="">
+        <div class="navbutton-set">
+            <a href="http://127.0.0.1:5500/new/Home.html" target="_self" class="navbutton nav-active">
+                <i class="fi fi-rr-home"></i>
+            </a>
+            <a class="navbutton nav-static">
+                <i class="fi fi-rr-comment-user"></i>
+            </a>
+            <a href="http://127.0.0.1:5500/new/News.html" class="navbutton nav-static">
+                <i class="fi fi-rr-megaphone-sound-waves"></i>
+            </a>
+            <a href="http://127.0.0.1:5500/new/About.html" class="navbutton nav-static">
+                <i class="fi fi-rr-bank"></i>
+            </a>
+            <a href="http://127.0.0.1:5500/new/Contact.html" target="_self" class="navbutton nav-static">
+                <i class="fi fi-rr-phone-call"></i>
+            </a>
+        </div>
+
+        <button class="darkbutton nav-static">
+          <i class="fi fi-rr-circle-user"></i>
+      </button>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="page">
+        
+        <div class="banner-container">
+            <img class="imgmain" src="imgs/aboutbanner.jpeg" alt="">
+            <img src="imgs/mainblob1.png"  alt="" class="bannerblob blob1">
+            <img src="imgs/subblob1.png"  alt="" class="bannerblob blob2">
+            <div class="captions">
+                <h1 class="slide-text">Citizen's Guides</h1>
+            </div>
+        </div>
+
+          <!-- Barangay Document Section -->
+      <div class="stepss">
+        <h1>How to Apply for Barangay Document</h1>
+        <p> Barangay documents certify your identity, residency, or financial status. These are often required for job
+          applications, government permits, scholarships, and legal purposes.</p>
+        
+        <div class="buttons">
+            <button class="button" id="documentation-btn">
+                <i class="fi fi-rr-document-signed"></i>
+                <h3>Documentation</h3>
+            </button>
+            <button class="button" id="faq-btn">
+                <i class="fi fi-rr-list"></i>
+                <h3>FAQ</h3>
+            </button>
+        </div>
+
+
+      </div>
+      <!-- Steps Section -->
+      <div id="documentation-content">
+        <!-- Step 1 -->
+
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(1)">
+            <span id="icon-1" class="toggle-icon">&gt;</span>
+            <span id="title-1" class="toggle-title">Step 1 – Prepare the Requirements</span>
+          </div>
+          <div id="content-1" class="collapsible-content">
+            <ol>
+              <li>Government-issued ID (e.g., Passport, Driver's License, Voter’s ID).</li>
+              <li>Proof of residence (e.g., utility bill, lease agreement).</li>
+              <li>Recent 1x1 or 2x2 photo (optional, depending on the barangay).</li>
+              <li>Processing fee (amount varies per barangay).</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(2)">
+            <span id="icon-2" class="toggle-icon">&gt;</span>
+            <span id="title-2" class="toggle-title">Step 2 – Visit the Barangay Hall</span>
+          </div>
+          <div id="content-2" class="collapsible-content">
+            <ol>
+              <li>Go to your local barangay office during operating hours.</li>
+              <li>Inform the staff about the specific document you need.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(3)">
+            <span id="icon-3" class="toggle-icon">&gt;</span>
+            <span id="title-3" class="toggle-title">Step 3 – Complete the Application Form</span>
+          </div>
+          <div id="content-3" class="collapsible-content">
+            <ol>
+              <li>Fill out the form provided by the barangay office.</li>
+              <li>Clearly state the purpose for requesting the document.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(4)">
+            <span id="icon-4" class="toggle-icon">&gt;</span>
+            <span id="title-4" class="toggle-title">Step 4 – Submit the Requirements</span>
+          </div>
+          <div id="content-4" class="collapsible-content">
+            <ol>
+              <li>Hand in your completed form and supporting documents.</li>
+              <li>Pay the processing fee and secure the receipt.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(5)">
+            <span id="icon-5" class="toggle-icon">&gt;</span>
+            <span id="title-5" class="toggle-title">Step 5 – Wait for Processing</span>
+          </div>
+          <div id="content-5" class="collapsible-content">
+            <ol>
+              <li>Processing usually takes a few minutes to a couple of hours.</li>
+              <li>Some documents may need approval from the Barangay Captain.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="toggleContent(6)">
+            <span id="icon-6" class="toggle-icon">&gt;</span>
+            <span id="title-6" class="toggle-title">Step 6 – Claim your Barangay Document</span>
+          </div>
+          <div id="content-6" class="collapsible-content">
+            <ol>
+              <li>Retrieve your document from the barangay office.</li>
+              <li>Verify that all details are correct before leaving.</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Section -->
+      <div id="faq-content" class="hidden">
+
+        <!--faq 1 -->
+
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(7)">
+            <span id="icon-faq-7" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-7" class="toggle-title-faq">What documents can I apply for?</span>
+          </div>
+          <div id="content-faq-7" class="collapsible-content-faq">
+            <p>Find answers to common questions about applying for barangay-issued documents. Learn more about the
+              application process, requirements, and processing times.</p>
+          </div>
+        </div>
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(8)">
+            <span id="icon-faq-8" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-8" class="toggle-title-faq"> How long does it take to process my application?</span>
+          </div>
+          <div id="content-faq-8" class="collapsible-content-faq">
+            <p>Processing times vary depending on the barangay, but most applications are processed within the same day.
+            </p>
+          </div>
+        </div>
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(9)">
+            <span id="icon-faq-9" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-9" class="toggle-title-faq">Is there a fee for barangay documents?</span>
+          </div>
+          <div id="content-faq-9" class="collapsible-content-faq">
+            <p>Yes, fees vary by barangay and type of document. Check with your barangay hall for specific costs.</p>
+          </div>
+        </div>
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(10)">
+            <span id="icon-faq-10" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-10" class="toggle-title-faq"> Can I apply for someone else?</span>
+          </div>
+          <div id="content-faq-10" class="collapsible-content-faq">
+            <p>Yes, but you may need an authorization letter and additional documentation.</p>
+          </div>
+        </div>
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(11)">
+            <span id="icon-faq-11" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-11" class="toggle-title-faq">How will I know when my document is ready?</span>
+          </div>
+          <div id="content-faq-11" class="collapsible-content-faq">
+            <p>You will be notified by the barangay office once your document is ready for pickup.</p>
+          </div>
+        </div>
+        <div class="collapsible-faq">
+          <div class="collapsible-header-faq" onclick="toggleContentFAQ(12)">
+            <span id="icon-faq-12" class="toggle-icon-faq">&gt;</span>
+            <span id="title-faq-12" class="toggle-title-faq">What should I do if I made a mistake on my
+              application?</span>
+          </div>
+          <div id="content-faq-12" class="collapsible-content-faq">
+            <p>If there’s a mistake on your application, contact your barangay office immediately to correct the error.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="citizens-guide">
+        <!-- Emergency Guides Section -->
+        <div class="emergency-section">
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/Cyclone.html" class="view-btn">→ View</a>
+                <img src="imgs/cyclonetab.png" alt="Tropical Cyclone">
+                <div class="caption">What to do in a<br><span class="disaster">Tropical Cyclone</span></div>
+            </a>
+          </div>
+          <div  class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/EarthQuake.html" class="view-btn">→ View</a>
+                <img src="imgs/earthquake.png" alt="Earthquake">
+                <div class="caption">What to do in an<br><span class="disaster">Earth Quake</span></div>
+            </a>
+          </div>
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/Fire.html" class="view-btn">→ View</a>
+                <img src="imgs/fire.png" alt="Fire Emergency">
+                <div class="caption">What to do in a<br><span class="disaster">Fire Emergency</span></div>
+            </a>
+          </div> 
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/Flood.html" class="view-btn">→ View</a>
+                <img src="imgs/flood.png" alt="Flood">
+                <div class="caption">What to do in a<br><span class="disaster">Flood</span></div>
+            </a>
+          </div>
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/ThunderStorm.html" class="view-btn">→ View</a>
+                <img src="imgs/thunderstorm.jpg" alt="Thunderstorm">
+                <div class="caption">What to do in a<br><span class="disaster">Thunder storm</span></div>
+            </a>
+          </div>
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/EmergencyBag.html" class="view-btn">→ View</a>
+                <img src="imgs/bag.png" alt="Emergency Go Bag">
+                <div class="caption">Preparing an <br><span class="disaster">Emergency<br> Go Bag</span></div>
+            </a>
+          </div>
+          <div class="emergency-card">
+            <a href="http://127.0.0.1:5500/new/Stroke.html" class="view-btn">→ View</a>
+                <img src="imgs/heat.png" alt="Heat Stroke">
+                <div class="caption">Tips to prevent <br><span class="disaster">Heat Stroke</span></div>
+            </a>
+          </div>
+          <div class="emergency-card Leptospirosis">
+            <a href="http://127.0.0.1:5500/new/Leptospirosis.html" class="view-btn">→ View</a>
+                <img src="imgs/lepto.png" alt="Leptospirosis">
+                <div class="caption">Tips to prevent <br><span class="disaster">Leptospirosis</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer">
+                <div class="logo-desc">
+                    <div class="community-logo">
+                        <img src="imgs/logo.png" alt="logo" style="width: 70px; aspect-ratio: 1;">
+                        <div>
+                            <h4>Official Website of Barangay Dinaga</h4>
+                        </div>
+                    </div>
+                    <p class="text-content">Property of Barangay Dinaga, Canaman, Camarines Sur, 4400. Developed by QuadraNova. Hosted by QuadraNova.</p>
+                </div>
+            
+                <div class="right-link-container">
+                    <div class="right-link">
+                        <h4>Home</h4>
+                        <ul>
+                            <li><a href="">Back to top</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="right-link">
+                      <h4>News</h4>
+                      <ul>
+                          <li><a href="http://127.0.0.1:5500/new/News.html">News Collection</a></li>
+                      </ul>
+                  </div>
+              
+                  <div class="right-link">
+                      <h4>About</h4>
+                      <ul>
+                          <li><a href="About.html#about">About Barangay</a></li>
+                          <li><a href="About.html#history">History</a></li>
+                          <li><a href="About.html#officials">Barangay Official</a></li>
+                          <li><a href="About.html#sk">Sangguniang Kabataan</a></li>
+                          <li><a href="About.html#bw">Barangay Watchman</a></li>
+                      </ul>
+                  </div>
+              
+                  <div class="right-link">
+                      <h4>Contact</h4>
+                      <ul>
+                          <li><a href="Contact.html#hotlines">Emergency Hotlines</a></li>
+                          <li><a href="Contact.html#touch">Get in Touch</a></li>
+                      </ul>
+                  </div>
+              </div>
+                
+        
+                <div class="copyright" style="bottom: 20px; left: 20px;">
+                    <p> &copy; QuadraNova 2024. All Rights Reserved.</p>
+                </div>
+        
+                <div class="icons">
+                  <a href="https://www.facebook.com/BrgyDinaga" target="_blank" class="footbutton">
+                      <i class="fi fi-brands-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/quad.ranova/" target="_blank" class="footbutton">
+                      <i class="fi fi-brands-instagram"></i>
+                  </a>
+              </div>
+            </div> 
+        </footer>  
+    </div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body{
+    background: #FBF8F6;
+}
+
+/* banner here */
+
+.banner-container {
+    flex-direction: column;
+    width: 100%; 
+    height: 275px;
+    position: relative;
+    background-color: #B31312;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.imgmain {
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    align-items: center;
+    object-fit: cover;
+}
+.bannerblob{
+    position: absolute;
+    object-fit: cover;
+}
+.caption {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: 0;
+    right: 0;
+    color: #FBF8F6;
+}
+.banner-img{
+    margin-top: -7rem;
+    margin-left: -1rem;
+    margin-right: 1rem;
+    width: 50vw; 
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
+
+.blob {
+    position: absolute;
+    border-radius: 0%;
+    z-index: 1;
+}
+
+.blob.bottom-left {
+    width: 25rem;
+    height: 7rem;
+    border-radius: 68% 32% 100% 0% / 28% 100% 0% 72%;
+    bottom: 0;
+    left: 0;
+}
+
+/* Get in Touch */
+
+.parent-container{
+    color: #FBF8F6;
+    line-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+.git-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+}
+.parent-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 90px;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    border: #EEE6E0 1px solid;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.eh-text-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 27px;
+    margin-left: 20px;
+    z-index: 2;
+}
+.logo-bg{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    mix-blend-mode: overlay;
+
+}
+.purp{
+    background-color: #7371B7;
+}
+.red{
+    background-color: #E76766;
+}
+.orange{
+    background-color: #F6B499;
+}
+.blue{
+    background-color: #92BCD7;
+}
+
+@media (max-width: 425px) {
+    .banner-container{
+        margin-top: 10px;
+        height: 260px;
+    }
+    .parent-container{
+        gap: 10px;
+    }
+    .container{
+        border-radius: 15px;
+        height: 100px;
+    }
+    .body-text{
+        text-align: center;
+    }
+    .parent-container{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .eh-text-wrap{
+        gap: 15px;
+    }
+}
