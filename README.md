@@ -32,4 +32,4 @@ This project uses **HTML, CSS, Tailwind, and JavaScript** to deliver a clean, us
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/brgy-dinaga-website.git
+   git clone [https://github.com/yourusername/brgy-dinaga-website.git](https://github.com/Takamichi23/Barangay-Dinaga-Website.git)
