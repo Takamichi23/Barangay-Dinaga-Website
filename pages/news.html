@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest community news, events, tournaments, and announcements from Barangay Dinaga, Municipality of Canaman, Camarines Sur.">
+    <title>News Collection — Barangay Dinaga</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Prevent theme flash on load -->
+    <script>
+        (() => {
+            try {
+                const t = localStorage.getItem("dinaga-theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                }
+            } catch {}
+        })();
+    </script>
+
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&display=swap" rel="stylesheet">
+
+    <!-- Flaticon UIcons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/news.css">
+
+    <!-- Scripts -->
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" aria-label="Primary navigation">
+        <a class="logo-link" href="../index.html" aria-label="Barangay Dinaga Home">
+            <img class="logo" src="../assets/images/logo.png" alt="Barangay Dinaga Official Seal">
+        </a>
+
+        <div class="navbutton-set">
+            <a href="../index.html" class="navbutton nav-static" aria-label="Home" data-tooltip="Home">
+                <i class="fi fi-rr-home" aria-hidden="true"></i>
+            </a>
+            <a href="citizen-guide.html" class="navbutton nav-static" aria-label="Citizen's Guides" data-tooltip="Citizen's Guides">
+                <i class="fi fi-rr-comment-user" aria-hidden="true"></i>
+            </a>
+            <a href="news.html" class="navbutton nav-active" aria-label="News & Events" aria-current="page" data-tooltip="News & Events">
+                <i class="fi fi-rr-megaphone-sound-waves" aria-hidden="true"></i>
+            </a>
+            <a href="about.html" class="navbutton nav-static" aria-label="About Dinaga" data-tooltip="About Dinaga">
+                <i class="fi fi-rr-bank" aria-hidden="true"></i>
+            </a>
+            <a href="contact.html" class="navbutton nav-static" aria-label="Contact & Hotlines" data-tooltip="Contact & Hotlines">
+                <i class="fi fi-rr-phone-call" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <button type="button" class="darkbutton nav-static" aria-label="Switch to Dark Mode" aria-pressed="false" data-tooltip="Dark Mode">
+            <i class="fi fi-rr-dark-mode-alt" aria-hidden="true"></i>
+        </button>
+    </nav>
+
+    <!-- Main Page -->
+    <main class="page" id="main-content">
+        <!-- Banner -->
+        <header class="banner-container">
+            <img class="imgmain" src="../assets/images/newsa.webp" alt="Barangay Dinaga News Collection">
+            <img src="../assets/images/mainblob1.png" alt="" aria-hidden="true" class="bannerblob bannerblob-bl">
+            <img src="../assets/images/subblob1.png" alt="" aria-hidden="true" class="bannerblob bannerblob-tr">
+            <div class="banner-caption">
+                <h1 class="banner-title">Barangay<br>News Collection</h1>
+            </div>
+        </header>
+
+        <!-- Unified Responsive News Grid -->
+        <section aria-label="Barangay News Articles">
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="../assets/images/news10.jpg" alt="Belen Making Contest winners in Barangay Dinaga" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Belen Making Contest Winners Announced!</h2>
+                            <p class="news-excerpt">
+                                Congratulations to our Belen-making contest winners: 1st Place — Zone 2; 2nd Place — Zone 1A; 3rd Place — Zone 5.
+                            </p>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> December 22, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news11.jpg" alt="Parol Making Contest winners in Barangay Dinaga" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Parol Making Contest Winners Announced!</h2>
+                            <p class="news-excerpt">
+                                Sincere congratulations to our Parol-making contest winners: 1st Place — Zone 5; 2nd Place — Zone 1A; 3rd Place — Zone 2.
+                            </p>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> December 22, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news9.jpg" alt="Barangay Dinaga reverse caroling grocery pack distribution" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Grocery Pack Distribution for Barangay Youth via Reverse Caroling</h2>
+                            <p class="news-excerpt">
+                                Dinaga nag-distribute nin Grocery Packs sa mga kahubenan kan Barangay sa paagi kan reverse caroling; huli sa maraot na panahon, sinagibo ta nalang ini sa satuyang Barangay Hall.
+                            </p>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> December 21, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news12.jpg" alt="SK Dinaga One-Day Volleyball League at San Agustin Court" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>SK Dinaga Canaman Volleyball One-Day League Results</h2>
+                            <p class="news-excerpt">
+                                Held at San Agustin Court — Champion: Team Dinaga 1; 1st Runner-Up: Team Manggayawan; 2nd Runner-Up: Team Baras. Congratulations to all teams!
+                            </p>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> December 15, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news4.jpg" alt="Alimbayod Moms 2nd Halloween Trick-or-Treat" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Congratulations on the Success of the 2nd Halloween Trick-or-Treat by Alimbayod Moms</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> November 17, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news5.jpg" alt="Barangay Dinaga Fiesta Parade" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Barangay Dinaga Fiesta Parade</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> October 6, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news6.jpg" alt="Mobile Legends Tournament at Dinaga Barangay Hall" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Mobile Legends Tournament at Dinaga Barangay Hall</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> October 5, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news1.jpg" alt="Dalagan Jovenes nin Canaman International Youth Day fun run" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Dalagan, Jovenes nin Canaman in Celebration of International Youth Day</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> August 9, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news2.jpg" alt="Youth Night and Awarding Ceremony at Mayor's Cup 2024" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Youth Night &amp; Awarding Ceremony — Mayor’s Cup 2024</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> August 9, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news7.jpg" alt="Linig Kita Earth Day cleanup drive in Dinaga" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Linig Kita! Earth Day Cleanup in Dinaga, Canaman, Camarines Sur</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> August 9, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news3.jpg" alt="Basketball Inter-Color Tournament in Zone 3 Facoma" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Basketball Inter-Color Tournament — Zone 3, Facoma, Dinaga, Canaman</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> May 5, 2024</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="../assets/images/news8.jpg" alt="Bagong Pilipinas Kickoff Rally LGU participation" class="news-img" loading="lazy">
+                    <div class="news-card-body">
+                        <div>
+                            <h2>Bagong Pilipinas Kick-Off Rally Set on January 28; LGU Participation Urged</h2>
+                        </div>
+                        <p class="news-date"><i class="fi fi-rr-calendar" aria-hidden="true"></i> January 28, 2024</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="logo-desc">
+                    <div class="community-logo">
+                        <img src="../assets/images/logo.png" alt="Barangay Dinaga Seal">
+                        <h4>Official Website of Barangay Dinaga</h4>
+                    </div>
+                    <p class="text-content">
+                        Property of Barangay Dinaga, Canaman, Camarines Sur, 4400. Developed by QuadraNova. Hosted by QuadraNova.
+                    </p>
+                </div>
+
+                <div class="right-link-container">
+                    <div class="right-link">
+                        <h4>Home</h4>
+                        <ul>
+                            <li><a href="../index.html">Homepage</a></li>
+                            <li><a href="#top">Back to Top</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>Citizen's Guides</h4>
+                        <ul>
+                            <li><a href="citizen-guide.html#apply">Document Application</a></li>
+                            <li><a href="citizen-guide.html#emergency-guides">Emergency Guides</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>News</h4>
+                        <ul>
+                            <li><a href="news.html">News Collection</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html#about">About Barangay</a></li>
+                            <li><a href="about.html#history">History</a></li>
+                            <li><a href="about.html#officials">Barangay Officials</a></li>
+                            <li><a href="about.html#sk">Sangguniang Kabataan</a></li>
+                            <li><a href="about.html#bw">Barangay Watchmen</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="contact.html#hotlines">Emergency Hotlines</a></li>
+                            <li><a href="contact.html#touch">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; QuadraNova 2024. All Rights Reserved.</p>
+                </div>
+
+                <div class="icons">
+                    <a href="https://www.facebook.com/BrgyDinaga" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="Barangay Dinaga Facebook">
+                        <i class="fi fi-brands-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.messenger.com" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="Facebook Messenger">
+                        <i class="fi fi-brands-facebook-messenger" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quad.ranova/" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="QuadraNova Instagram">
+                        <i class="fi fi-brands-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

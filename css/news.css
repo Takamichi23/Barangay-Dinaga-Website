@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Barangay Dinaga — News Collection Page Styles
+   ========================================================================== */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-hover-border);
+}
+
+.news-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background-color: var(--bg-surface-alt);
+}
+
+.news-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 14px;
+    padding: 18px 20px 20px;
+}
+
+.news-card-body h2 {
+    margin: 0;
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.news-excerpt {
+    margin: 6px 0 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text-body);
+}
+
+.news-date {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.news-date i {
+    font-size: 0.9rem;
+    display: inline-flex;
+}
+
+/* ==========================================================================
+   News Responsive
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Barangay Dinaga — Contact & Assistance Page Styles
+   ========================================================================== */
+
+.contact-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.contact-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.contact-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contact-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 118px;
+    padding: 20px 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-card.purp {
+    background-color: var(--card-purple);
+}
+
+.contact-card.red {
+    background-color: var(--card-coral);
+}
+
+.contact-card.orange {
+    background-color: var(--card-peach);
+}
+
+.contact-card.blue {
+    background-color: var(--card-sky);
+}
+
+.eh-text-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 78%;
+}
+
+.contact-title-text {
+    margin: 0;
+    font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-on-dark);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.contact-text {
+    margin: 0;
+    font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text-on-dark);
+    word-break: break-word;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.14);
+}
+
+.logo-bg {
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 115%;
+    width: auto;
+    max-width: 48%;
+    object-fit: contain;
+    opacity: 0.25;
+    mix-blend-mode: luminosity;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Contact Responsive
+   ========================================================================== */
+
+@media (max-width: 1120px) {
+    .contact-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-grid-4,
+    .contact-grid-3,
+    .contact-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: 102px;
+        padding: 18px 20px;
+    }
+}

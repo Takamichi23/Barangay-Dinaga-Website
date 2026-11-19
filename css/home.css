@@ -1,0 +1,653 @@
+/* ==========================================================================
+   Barangay Dinaga — Home Page Styles
+   ========================================================================== */
+
+/* Header Bar (Title + Real-Time Clock) */
+.quick-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    color: var(--text-primary);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header-left .munici {
+    font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.01em;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    text-align: right;
+}
+
+#current-time {
+    font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+#current-date {
+    font-size: clamp(0.88rem, 1.05vw, 1rem);
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* Hero Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: clamp(280px, 50vh, 510px);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #2B2A4C;
+    box-shadow: var(--shadow-sm);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 550ms ease, visibility 550ms ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(22, 21, 46, 0.78) 0%,
+        rgba(22, 21, 46, 0.25) 50%,
+        rgba(22, 21, 46, 0.35) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.slide .imgmain {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideblob {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+    width: auto;
+    max-width: 75%;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.slide .caption {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    color: var(--text-on-dark);
+    pointer-events: none;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 24px;
+    left: 28px;
+    right: 110px;
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3.3vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--text-on-dark);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
+}
+
+.date-text {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    text-align: right;
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    font-weight: 500;
+    color: var(--text-on-dark);
+    background: rgba(28, 27, 51, 0.55);
+    backdrop-filter: blur(8px);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(251, 248, 246, 0.16);
+}
+
+/* Slideshow Controls */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(251, 248, 246, 0.35);
+    background-color: rgba(251, 248, 246, 0.85);
+    color: #2B2A4C;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0.72;
+    transition: opacity var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.prev {
+    left: 16px;
+}
+
+.next {
+    right: 16px;
+}
+
+.prev i,
+.next i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.prev:hover,
+.next:hover {
+    opacity: 1;
+    background-color: #FFFFFF;
+    transform: translateY(-50%) scale(1.06);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 4;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(251, 248, 246, 0.45);
+    transition: background-color var(--transition-fast), transform var(--transition-fast), width var(--transition-fast);
+}
+
+.dot:hover {
+    background-color: rgba(251, 248, 246, 0.8);
+}
+
+.dot.active {
+    background-color: #FBF8F6;
+    width: 28px;
+    border-radius: var(--radius-pill);
+}
+
+/* Quick Links Row */
+.sub {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.quick-link {
+    position: relative;
+    display: block;
+    height: clamp(165px, 21vh, 215px);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #2B2A4C;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.quick-link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.quick-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(24, 23, 48, 0.82) 0%,
+        rgba(24, 23, 48, 0.18) 55%,
+        rgba(24, 23, 48, 0.05) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ql-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease;
+}
+
+.quick-link:hover .ql-main {
+    transform: scale(1.05);
+}
+
+.ql-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ql-overlay-1 {
+    height: 55%;
+    width: auto;
+}
+
+.ql-overlay-2 {
+    width: 100%;
+    height: auto;
+    bottom: -18px;
+}
+
+.ql-overlay-3 {
+    height: 62%;
+    width: auto;
+}
+
+.quick-link .header-text {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+    z-index: 3;
+    color: var(--text-on-dark);
+    font-size: clamp(1.05rem, 1.35vw, 1.32rem);
+    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.view-pill {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 14px 4px 10px;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.view-pill i {
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+}
+
+.quick-link:hover .view-pill {
+    background-color: var(--accent-hover-bg);
+    color: #2B2A4C;
+}
+
+[data-theme="dark"] .quick-link:hover .view-pill {
+    color: #FBF8F6;
+}
+
+/* Featured Articles */
+.fa-article-set {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.fa-article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.fa-article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-hover-border);
+}
+
+.fa-article-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background-color: var(--bg-surface-alt);
+}
+
+.fa-text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 10px;
+    padding: 16px 18px 18px;
+}
+
+.fa-text-wrap .header-text {
+    color: var(--text-primary);
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.fa-article-date {
+    margin: 0;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* Services & Census Accent Cards */
+.services-container,
+.census-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.services,
+.census {
+    position: relative;
+    min-height: 185px;
+    padding: 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.services:hover,
+.census:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-purple {
+    background-color: var(--card-purple);
+}
+
+.card-peach {
+    background-color: var(--card-peach);
+}
+
+.card-coral {
+    background-color: var(--card-coral);
+}
+
+.card-sky {
+    background-color: var(--card-sky);
+}
+
+.services i,
+.census i {
+    position: absolute;
+    bottom: -14px;
+    right: -10px;
+    font-size: 8.5rem;
+    line-height: 1;
+    color: rgba(28, 27, 51, 0.22);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.services-note {
+    margin: 10px 0 0;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.census-label {
+    display: block;
+    font-size: clamp(0.95rem, 1.15vw, 1.12rem);
+    font-weight: 600;
+    opacity: 0.94;
+    margin-bottom: 4px;
+}
+
+.typewriter-number {
+    display: inline-block;
+    font-size: clamp(2rem, 3vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 600ms ease, transform 500ms ease;
+}
+
+.typewriter-number.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Dinaga Gallery + Map */
+.about-container {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.photos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.photo-main {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.photo-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-sub-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.photo-sub {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.photo-sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 350ms ease;
+}
+
+.photo-sub:hover img {
+    transform: scale(1.05);
+}
+
+.map-wrapper {
+    position: relative;
+    min-height: 360px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-image: url("../assets/images/map.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.gmaps {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    border: 0;
+    display: block;
+}
+
+/* ==========================================================================
+   Home Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 1120px) {
+    .fa-article-set {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-container,
+    .census-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper,
+    .gmaps {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 860px) {
+    .sub {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-link {
+        height: 170px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .header-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .slideshow {
+        height: 290px;
+    }
+
+    .slide-text {
+        left: 16px;
+        right: 16px;
+        bottom: 46px;
+        font-size: 1.5rem;
+    }
+
+    .date-text {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+        text-align: left;
+        font-size: 0.78rem;
+        padding: 6px 10px;
+    }
+
+    .dots-container {
+        bottom: 14px;
+        right: 16px;
+    }
+
+    .prev,
+    .next {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .fa-article-set {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .census {
+        min-height: 150px;
+        padding: 18px;
+    }
+
+    .services i,
+    .census i {
+        font-size: 6.5rem;
+    }
+
+    .photo-sub-container {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Citizen's Guides for Barangay Dinaga residents — step-by-step instructions for barangay documents, FAQs, and disaster & health preparedness guides.">
+    <title>Citizen's Guides — Barangay Dinaga</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Prevent theme flash on load -->
+    <script>
+        (() => {
+            try {
+                const t = localStorage.getItem("dinaga-theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                }
+            } catch {}
+        })();
+    </script>
+
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&display=swap" rel="stylesheet">
+
+    <!-- Flaticon UIcons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/citizen-guide.css">
+
+    <!-- Scripts -->
+    <script src="../js/main.js" defer></script>
+    <script src="../js/citizen-guide.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" aria-label="Primary navigation">
+        <a class="logo-link" href="../index.html" aria-label="Barangay Dinaga Home">
+            <img class="logo" src="../assets/images/logo.png" alt="Barangay Dinaga Official Seal">
+        </a>
+
+        <div class="navbutton-set">
+            <a href="../index.html" class="navbutton nav-static" aria-label="Home" data-tooltip="Home">
+                <i class="fi fi-rr-home" aria-hidden="true"></i>
+            </a>
+            <a href="citizen-guide.html" class="navbutton nav-active" aria-label="Citizen's Guides" aria-current="page" data-tooltip="Citizen's Guides">
+                <i class="fi fi-rr-comment-user" aria-hidden="true"></i>
+            </a>
+            <a href="news.html" class="navbutton nav-static" aria-label="News & Events" data-tooltip="News & Events">
+                <i class="fi fi-rr-megaphone-sound-waves" aria-hidden="true"></i>
+            </a>
+            <a href="about.html" class="navbutton nav-static" aria-label="About Dinaga" data-tooltip="About Dinaga">
+                <i class="fi fi-rr-bank" aria-hidden="true"></i>
+            </a>
+            <a href="contact.html" class="navbutton nav-static" aria-label="Contact & Hotlines" data-tooltip="Contact & Hotlines">
+                <i class="fi fi-rr-phone-call" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <button type="button" class="darkbutton nav-static" aria-label="Switch to Dark Mode" aria-pressed="false" data-tooltip="Dark Mode">
+            <i class="fi fi-rr-dark-mode-alt" aria-hidden="true"></i>
+        </button>
+    </nav>
+
+    <!-- Main Page -->
+    <main class="page" id="main-content">
+        <!-- Banner -->
+        <header class="banner-container">
+            <img class="imgmain" src="../assets/images/aboutbanner.jpeg" alt="Barangay Dinaga Citizen's Guides">
+            <img src="../assets/images/mainblob1.png" alt="" aria-hidden="true" class="bannerblob bannerblob-bl">
+            <img src="../assets/images/subblob1.png" alt="" aria-hidden="true" class="bannerblob bannerblob-tr">
+            <div class="banner-caption">
+                <h1 class="banner-title">Citizen's Guides</h1>
+            </div>
+        </header>
+
+        <!-- Document Application Section -->
+        <section class="section-parent" id="apply" aria-labelledby="apply-heading">
+            <div class="section-header">
+                <h2 class="title-text" id="apply-heading">How to Apply for a Barangay Document</h2>
+                <p class="section-subtitle">
+                    Barangay documents certify your identity, residency, or financial status. These are commonly required for job applications, government permits, scholarships, and legal transactions.
+                </p>
+
+                <div class="buttontag-set" role="tablist" aria-label="Guide sections">
+                    <button type="button" class="button-tag active" id="documentation-btn" role="tab" aria-selected="true" aria-controls="documentation-content">
+                        <i class="fi fi-rr-document-signed" aria-hidden="true"></i>
+                        <span>Documentation Steps</span>
+                    </button>
+                    <button type="button" class="button-tag" id="faq-btn" role="tab" aria-selected="false" aria-controls="faq-content">
+                        <i class="fi fi-rr-list" aria-hidden="true"></i>
+                        <span>FAQ</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step-by-step Accordion -->
+            <div id="documentation-content" class="accordion-list" role="tabpanel" aria-labelledby="documentation-btn">
+                <div class="collapsible open">
+                    <button type="button" class="collapsible-header" aria-expanded="true" aria-controls="content-1">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 1 — Prepare the Requirements</span>
+                    </button>
+                    <div id="content-1" class="collapsible-content">
+                        <ol>
+                            <li>Valid government-issued ID (e.g., PhilSys National ID, Passport, Driver’s License, Voter’s ID).</li>
+                            <li>Proof of residence (e.g., utility bill, lease agreement, or barangay residency record).</li>
+                            <li>Recent 1×1 or 2×2 ID photo (when required for specific clearances).</li>
+                            <li>Applicable processing fee (varies depending on the document type; indigency certificates are typically free).</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-2">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 2 — Visit the Barangay Hall</span>
+                    </button>
+                    <div id="content-2" class="collapsible-content">
+                        <ol>
+                            <li>Proceed to the Barangay Dinaga Hall during regular office hours.</li>
+                            <li>Inform the desk staff about the specific document or clearance you need.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-3">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 3 — Complete the Application Form</span>
+                    </button>
+                    <div id="content-3" class="collapsible-content">
+                        <ol>
+                            <li>Fill out the request form provided by the Barangay Secretary’s desk accurately.</li>
+                            <li>Clearly state your purpose for requesting the document.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-4">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 4 — Submit the Requirements</span>
+                    </button>
+                    <div id="content-4" class="collapsible-content">
+                        <ol>
+                            <li>Hand in your completed form together with your supporting IDs and documents.</li>
+                            <li>Pay any applicable processing fee at the Treasurer’s window and keep your official receipt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-5">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 5 — Wait for Processing</span>
+                    </button>
+                    <div id="content-5" class="collapsible-content">
+                        <ol>
+                            <li>Processing typically takes a few minutes to a couple of hours depending on office volume.</li>
+                            <li>Certain clearances require verification and signature by the Barangay Captain.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-6">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Step 6 — Claim Your Barangay Document</span>
+                    </button>
+                    <div id="content-6" class="collapsible-content">
+                        <ol>
+                            <li>Receive your signed and sealed document from the releasing desk.</li>
+                            <li>Verify that your name, address, date, and purpose are accurate before leaving.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div id="faq-content" class="accordion-list hidden" role="tabpanel" aria-labelledby="faq-btn">
+                <div class="collapsible open">
+                    <button type="button" class="collapsible-header" aria-expanded="true" aria-controls="content-faq-1">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>What documents can I apply for?</span>
+                    </button>
+                    <div id="content-faq-1" class="collapsible-content">
+                        <p>
+                            Residents can request a Barangay Clearance, Certificate of Residency, Certificate of Indigency, Barangay Business Clearance, Certificate of Good Moral Character, and other local certifications issued by the Barangay Hall.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-faq-2">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>How long does it take to process my application?</span>
+                    </button>
+                    <div id="content-faq-2" class="collapsible-content">
+                        <p>
+                            Most standard barangay documents are processed within the same day, often within minutes to a couple of hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-faq-3">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Is there a fee for barangay documents?</span>
+                    </button>
+                    <div id="content-faq-3" class="collapsible-content">
+                        <p>
+                            Fees depend on the type of document requested. First-time jobseekers (under RA 11261) and indigency certifications may be exempt from fees—check with the Barangay Hall staff for exact rates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-faq-4">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>Can I apply on behalf of someone else?</span>
+                    </button>
+                    <div id="content-faq-4" class="collapsible-content">
+                        <p>
+                            Yes, an immediate family member or authorized representative may apply on someone else’s behalf by presenting a signed authorization letter along with valid IDs of both the applicant and the representative.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-faq-5">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>How will I know when my document is ready?</span>
+                    </button>
+                    <div id="content-faq-5" class="collapsible-content">
+                        <p>
+                            For same-day requests, staff will call your name at the waiting area once signed. For requests requiring additional verification, the barangay office will advise you of the pickup schedule or contact you once ready.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="content-faq-6">
+                        <span class="toggle-icon" aria-hidden="true"><i class="fi fi-rr-angle-small-right"></i></span>
+                        <span>What should I do if I made a mistake on my application?</span>
+                    </button>
+                    <div id="content-faq-6" class="collapsible-content">
+                        <p>
+                            Inform the Barangay Hall staff immediately so they can update your details before final printing and sealing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency & Health Guides Grid -->
+        <section class="citizens-guide" id="emergency-guides" aria-labelledby="emergency-heading">
+            <div class="section-header">
+                <h2 class="title-text" id="emergency-heading">Emergency &amp; Health Guides</h2>
+                <p class="section-subtitle">
+                    Stay prepared before, during, and after disasters and seasonal health risks with these quick safety guides.
+                </p>
+            </div>
+
+            <div class="emergency-section">
+                <a href="guides/cyclone.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/cyclonetab.png" alt="Tropical Cyclone preparedness" loading="lazy">
+                    <div class="guide-title">What to do in a <span class="disaster">Tropical Cyclone</span></div>
+                </a>
+
+                <a href="guides/earthquake.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/earthquake.png" alt="Earthquake preparedness" loading="lazy">
+                    <div class="guide-title">What to do in an <span class="disaster">Earthquake</span></div>
+                </a>
+
+                <a href="guides/fire.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/fire.png" alt="Fire Emergency preparedness" loading="lazy">
+                    <div class="guide-title">What to do in a <span class="disaster">Fire Emergency</span></div>
+                </a>
+
+                <a href="guides/flood.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/flood.png" alt="Flood preparedness" loading="lazy">
+                    <div class="guide-title">What to do in a <span class="disaster">Flood</span></div>
+                </a>
+
+                <a href="guides/thunderstorm.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/thunderstorm.jpg" alt="Thunderstorm preparedness" loading="lazy">
+                    <div class="guide-title">What to do in a <span class="disaster">Thunderstorm</span></div>
+                </a>
+
+                <a href="guides/emergency-bag.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/bag.png" alt="Emergency Go Bag essentials" loading="lazy">
+                    <div class="guide-title">Preparing an <span class="disaster">Emergency Go Bag</span></div>
+                </a>
+
+                <a href="guides/heat-stroke.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/heat.png" alt="Heat Stroke prevention" loading="lazy">
+                    <div class="guide-title">Tips to prevent <span class="disaster">Heat Stroke</span></div>
+                </a>
+
+                <a href="guides/leptospirosis.html" class="emergency-card">
+                    <span class="view-btn">→ View</span>
+                    <img src="../assets/images/lepto.png" alt="Leptospirosis prevention" loading="lazy">
+                    <div class="guide-title">Tips to prevent <span class="disaster">Leptospirosis</span></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="logo-desc">
+                    <div class="community-logo">
+                        <img src="../assets/images/logo.png" alt="Barangay Dinaga Seal">
+                        <h4>Official Website of Barangay Dinaga</h4>
+                    </div>
+                    <p class="text-content">
+                        Property of Barangay Dinaga, Canaman, Camarines Sur, 4400. Developed by QuadraNova. Hosted by QuadraNova.
+                    </p>
+                </div>
+
+                <div class="right-link-container">
+                    <div class="right-link">
+                        <h4>Home</h4>
+                        <ul>
+                            <li><a href="../index.html">Homepage</a></li>
+                            <li><a href="#top">Back to Top</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>Citizen's Guides</h4>
+                        <ul>
+                            <li><a href="#apply">Document Application</a></li>
+                            <li><a href="#emergency-guides">Emergency Guides</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>News</h4>
+                        <ul>
+                            <li><a href="news.html">News Collection</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html#about">About Barangay</a></li>
+                            <li><a href="about.html#history">History</a></li>
+                            <li><a href="about.html#officials">Barangay Officials</a></li>
+                            <li><a href="about.html#sk">Sangguniang Kabataan</a></li>
+                            <li><a href="about.html#bw">Barangay Watchmen</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-link">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="contact.html#hotlines">Emergency Hotlines</a></li>
+                            <li><a href="contact.html#touch">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; QuadraNova 2024. All Rights Reserved.</p>
+                </div>
+
+                <div class="icons">
+                    <a href="https://www.facebook.com/BrgyDinaga" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="Barangay Dinaga Facebook">
+                        <i class="fi fi-brands-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.messenger.com" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="Facebook Messenger">
+                        <i class="fi fi-brands-facebook-messenger" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quad.ranova/" target="_blank" rel="noopener noreferrer" class="footbutton" aria-label="QuadraNova Instagram">
+                        <i class="fi fi-brands-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

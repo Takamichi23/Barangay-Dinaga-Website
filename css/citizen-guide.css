@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Barangay Dinaga — Citizen's Guides Page Styles
+   ========================================================================== */
+
+/* Accordion List Container */
+.accordion-list {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.collapsible {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition-fast);
+}
+
+.collapsible.open {
+    border-color: var(--accent-hover-border);
+}
+
+.collapsible-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    text-align: left;
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    font-weight: 700;
+    transition: background-color var(--transition-fast);
+}
+
+.collapsible-header:hover {
+    background-color: var(--bg-surface-hover);
+}
+
+.toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.collapsible.open .toggle-icon {
+    transform: rotate(90deg);
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-color);
+}
+
+.collapsible-content {
+    display: none;
+    padding: 16px 22px 20px 62px;
+    background-color: var(--accent-soft-bg);
+    color: var(--text-body);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.96rem;
+    line-height: 1.65;
+}
+
+.collapsible.open .collapsible-content {
+    display: block;
+}
+
+.collapsible-content ol,
+.collapsible-content ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.collapsible-content p {
+    margin: 0;
+}
+
+/* Emergency Guides Section */
+.citizens-guide {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.emergency-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.emergency-card {
+    position: relative;
+    display: block;
+    height: 310px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #2B2A4C;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.emergency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.emergency-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(18, 17, 40, 0.88) 0%,
+        rgba(18, 17, 40, 0.28) 52%,
+        rgba(18, 17, 40, 0.08) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.emergency-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease;
+}
+
+.emergency-card:hover img {
+    transform: scale(1.06);
+}
+
+.emergency-card .view-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 13px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(251, 248, 246, 0.94);
+    color: #2B2A4C;
+    font-size: 0.88rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+    transition: background-color var(--transition-fast);
+}
+
+.emergency-card:hover .view-btn {
+    background-color: #D6CFEE;
+}
+
+.emergency-card .guide-title {
+    position: absolute;
+    bottom: 18px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
+    color: var(--text-on-dark);
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+.emergency-card .disaster {
+    display: block;
+    margin-top: 3px;
+    font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+/* ==========================================================================
+   Citizen's Guides Responsive
+   ========================================================================== */
+
+@media (max-width: 1120px) {
+    .emergency-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .citizens-guide {
+        padding: 16px;
+    }
+
+    .emergency-section {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-card {
+        height: 230px;
+    }
+
+    .collapsible-content {
+        padding: 14px 16px 16px 20px;
+    }
+}
